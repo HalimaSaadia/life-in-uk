@@ -14,6 +14,38 @@ $secondary_color:#DB4746;
     max-width: 1200px;
     margin: auto;
 }
+
+.headingSection {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        img{
+            margin: auto;
+            
+        }
+        h3{
+         font-size: 30px;
+         font-weight: 700;
+         color: $primary_color;
+        
+         margin-top: 15px;
+         
+        }
+        p{
+            border: 2px solid $secondary_color;
+            width: 100px;
+            text-align: center;
+            margin: 20px auto;
+        }
+    }
+    
+      
+ }
 .navbarTop{
     background-color: $primary_color ;
     padding: 0 10px;
@@ -231,6 +263,61 @@ gap: 50px;
    
 }
 
+.our-coursed-section{
+ padding: 50px;
+    .container{
+        display: flex;
+      
+        img{
+            width: 53px;
+        
+        }
+        div{
+            color: white;
+            padding: 50px 40px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            h5{
+                font-size: 21px;
+                font-weight: 700;
+                margin-top: 20px;
+            }
+            p{
+                font-size: 13px;
+                font-weight: 500;
+                flex-grow: 1;
+            }
+            span{
+                font-size: 15px;
+                font-weight: 700;
+                display: inline-block;
+                transition: transform .3s ease-in-out;
+                &:hover{
+                    transform: translateY(10px);
+                }
+            }
+           
+        }
+       > :first-child{
+        border-radius: 10px 0 0 10px;
+       } 
+       > :last-child{
+        border-radius: 0px 10px 10px 0px;
+       } 
+
+       > :last-child, > :nth-child(2){
+            background-color: $primary_color;
+   
+        }
+       > :first-child, > :nth-child(3){
+            background-color: $secondary_color;
+         
+        }
+       
+    }
+}
+
 @keyframes slideInFromBottom {
     0% {
       bottom: -100px;
@@ -298,11 +385,26 @@ gap: 50px;
         font-weight: bold!important;
         font-size: larger;
     }
+    .our-coursed-section{
+        .container{
+            flex-wrap: wrap;
+        }
+        
+    }
+  }
+  @media only screen and (max-width: 768px){
+    .our-coursed-section{
+        .container{
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+    }
   }
   @media only screen and (min-width: 768px){
     .bannerCounter span{
         font-size: 69px;
-
+       
     }
   }
   @media only screen and (min-width: 1024px){

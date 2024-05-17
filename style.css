@@ -8,6 +8,33 @@
   margin: auto;
 }
 
+.headingSection {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+.headingSection div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.headingSection div img {
+  margin: auto;
+}
+.headingSection div h3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #262B62;
+  margin-top: 15px;
+}
+.headingSection div p {
+  border: 2px solid #DB4746;
+  width: 100px;
+  text-align: center;
+  margin: 20px auto;
+}
+
 .navbarTop {
   background-color: #262B62;
   padding: 0 10px;
@@ -196,6 +223,54 @@
   margin-top: 10px;
 }
 
+.our-coursed-section {
+  padding: 50px;
+}
+.our-coursed-section .container {
+  display: flex;
+}
+.our-coursed-section .container img {
+  width: 53px;
+}
+.our-coursed-section .container div {
+  color: white;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.our-coursed-section .container div h5 {
+  font-size: 21px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.our-coursed-section .container div p {
+  font-size: 13px;
+  font-weight: 500;
+  flex-grow: 1;
+}
+.our-coursed-section .container div span {
+  font-size: 15px;
+  font-weight: 700;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+.our-coursed-section .container div span:hover {
+  transform: translateY(10px);
+}
+.our-coursed-section .container > :first-child {
+  border-radius: 10px 0 0 10px;
+}
+.our-coursed-section .container > :last-child {
+  border-radius: 0px 10px 10px 0px;
+}
+.our-coursed-section .container > :last-child, .our-coursed-section .container > :nth-child(2) {
+  background-color: #262B62;
+}
+.our-coursed-section .container > :first-child, .our-coursed-section .container > :nth-child(3) {
+  background-color: #DB4746;
+}
+
 @keyframes slideInFromBottom {
   0% {
     bottom: -100px;
@@ -251,6 +326,15 @@
   .bannerCounter span {
     font-weight: bold !important;
     font-size: larger;
+  }
+  .our-coursed-section .container {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .our-coursed-section .container {
+    flex-wrap: wrap;
+    gap: 20px;
   }
 }
 @media only screen and (min-width: 768px) {
