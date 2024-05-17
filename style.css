@@ -1,0 +1,239 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbarTop {
+  background-color: #262B62;
+  padding: 0 10px;
+  height: 50px;
+}
+.navbarTop .loginSection {
+  border-left: 2px solid #191E5A !important;
+  height: 100%;
+}
+.navbarTop .navbarCallIcon {
+  color: #DB4746;
+  transition: color 0.3s ease-in-out;
+}
+.navbarTop .navbarNumber {
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+.navbarTop .callSection:hover .navbarCallIcon {
+  color: white;
+}
+.navbarTop .callSection:hover .navbarNumber {
+  color: #DB4746;
+}
+
+.bannerSection {
+  background-image: url("https://fasttracklifeuk.co.uk/wp-content/uploads/2023/09/page-LIFE-in-theuk-test-training-backround.jpg");
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+.bannerSection .split-background {
+  background: linear-gradient(155deg, rgba(3, 4, 17, 0.4431372549) 50%, #DB4746 50%);
+  padding: 40px 0;
+  z-index: 0;
+}
+.bannerSection .bannerContent {
+  z-index: 10;
+}
+.bannerSection .bannerContent .subTitle {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 0;
+}
+.bannerSection .bannerContent .smallTitle {
+  font-size: 63px;
+  font-weight: 700;
+  line-height: 1;
+}
+.bannerSection .bannerContent .largeTitle {
+  font-size: 80px;
+  font-weight: 700;
+  opacity: 0;
+  position: relative;
+  line-height: 0.7;
+  animation: slideInFromBottom 1s ease-out forwards;
+}
+.bannerSection .bannerContent ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+}
+.bannerSection .bannerContent ul li {
+  margin-bottom: 5px;
+  transition: fill 0.5s ease-in-out;
+}
+.bannerSection .bannerContent ul li:hover svg {
+  fill: white;
+}
+.bannerSection .bannerContent ul li:hover span {
+  color: #DB4746;
+}
+.bannerSection .bannerContent ul li svg {
+  width: 2em;
+  height: 2em;
+  fill: #DB4746;
+  transition: fill 0.3s ease-in-out;
+}
+.bannerSection .bannerContent ul li span {
+  display: inline-block;
+  font-size: 18px !important;
+  vertical-align: middle;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+.bannerSection .bannerContent button {
+  padding: 15px 40px;
+  border-radius: 50px;
+  border: none;
+  font-size: 20px;
+  color: #262B62;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 30px;
+  transition: transform 0.5s ease;
+}
+.bannerSection .bannerContent button:hover {
+  transform: translateY(20px);
+}
+.bannerSection .bannerContent button span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262B62;
+  height: 20px;
+  width: 20px;
+  margin-top: 5px;
+  border-radius: 50%;
+}
+.bannerSection .bannerContent button span i {
+  color: white;
+  font-size: 12px;
+}
+.bannerSection .bannerMedia {
+  z-index: 20 !important;
+  padding-top: 40px;
+  vertical-align: bottom;
+}
+.bannerSection .bannerMedia .bannerMediaImage {
+  position: relative;
+}
+.bannerSection .bannerMedia .mainImage {
+  width: 477px;
+  margin: auto;
+}
+.bannerSection .bannerMedia .celebrationImage {
+  position: absolute;
+  top: 120px;
+  left: -50px;
+}
+.bannerSection .bannerMedia .bannerCounter {
+  padding: 10px 30px;
+  background-color: white;
+  color: #262B62;
+  border-radius: 10px;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+  animation: slideInFromTop 1s ease-out forwards;
+}
+.bannerSection .bannerMedia .bannerCounter span {
+  display: inline-block;
+  color: #262B62;
+}
+.bannerSection .bannerMedia .bannerCounter p {
+  color: #262B62;
+  font-weight: bold;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    bottom: -100px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+@keyframes slideInFromTop {
+  0% {
+    top: -100px;
+    left: 70%;
+    opacity: 0;
+  }
+  100% {
+    top: 50px;
+    left: 70%;
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .callSection {
+    font-size: 12px;
+  }
+  .navbarNumber {
+    font-size: 12px;
+  }
+  .bannerContent p, h1, .largeTitle {
+    text-align: center;
+  }
+  .bannerContent ul li {
+    display: flex;
+  }
+  .bannerContent ul li span {
+    text-align: left !important;
+  }
+  .smallTitle, .largeTitle {
+    font-size: 50px !important;
+  }
+  .mainImage {
+    width: 300px !important;
+  }
+  .celebrationImage {
+    width: 100px !important;
+    left: 0px !important;
+  }
+  .bannerCounter {
+    padding: 10px !important;
+    right: 5px !important;
+  }
+  .bannerCounter span {
+    font-weight: bold !important;
+    font-size: larger;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .bannerCounter span {
+    font-size: 69px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .bannerContent {
+    width: 40%;
+  }
+  .largeTitle {
+    line-height: 1 !important;
+  }
+  .bannerMedia {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .logo {
+    height: 55px;
+  }
+}/*# sourceMappingURL=style.css.map */
